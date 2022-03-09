@@ -1,32 +1,25 @@
-package ru.geekbrains.lesson1;
+import java.util.*;
 
-import java.util.Random;
-
-public class LessonOneApp {
+public class lesson1 {
     public static void main (String[] args) {
+
         printThreeWords();
-        checkSumSign();
+
+        boolean result = checkSumSign(-45, 10);
+        System.out.println(result? "Sum positive" : "Sum negative");
+
         printColor();
         compareNumbers();
     }
-    public static void printThreeWords() {
+    static void printThreeWords() {
         System.out.println("Orange");
         System.out.println("Banana");
         System.out.println("Apple");
     }
-    public static void checkSumSign() {
-        int a, b, c;
-        a = 13;
-        b = 22;
-        c = a + b;
-        if (c >= 0) {
-            System.out.println("Сумма положительная");
-        } else {
-            System.out.println("Сумма отрицательная");
-        };
-
+    static boolean checkSumSign(int a, int b) {
+        return a + b >= 0;
     }
-    public static void printColor() {
+    static void printColor() {
         int value = 0;
 
         if (value <= 0) {
@@ -39,7 +32,7 @@ public class LessonOneApp {
             System.out.println("Зеленый");
         }
     }
-    public static void compareNumbers() {
+    static void compareNumbers() {
         int a, b;
         a = 2;
         b = 10;
