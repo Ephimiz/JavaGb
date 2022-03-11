@@ -1,5 +1,13 @@
 import java.util.*;
-
+/**
+* Java 1. Homework #1
+*
+* @author Ephim
+* @version 09.03.2022
+*
+*
+*
+*/
 public class lesson1 {
     public static void main (String[] args) {
 
@@ -41,7 +49,7 @@ public class lesson1 {
             System.out.println("a >= b");
         } else {
             System.out.println("a < b");
-        }
+    }
     }
 
 }

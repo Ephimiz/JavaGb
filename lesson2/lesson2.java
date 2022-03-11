@@ -1,42 +1,53 @@
 import java.util.*;
-
+/**
+* Java 1. Homework #2
+*
+* @author Ephim
+* @version 09.03.2022
+*
+*
+*
+*/
 public class lesson2 {
 
   public static void main(String[] args) {
 
-        boolean result = checkSumSign(10, 30);
-        System.out.println(result? "true" : "false");
+
+        System.out.println(checkSumSign(10, -5));
+        System.out.println(checkSumSign(20, 0));
+        System.out.println(checkSumSign(1, -5));
+        System.out.println(checkSumSign(1, 10));
+        System.out.println(" ");
 
         checkValue(-5);
+        System.out.println(" ");
 
-        boolean check = LessThanZeroCheck(-1);
-        System.out.println(check? "true" : "false");
+        System.out.println(lessThanZeroCheck(1));
+        System.out.println(lessThanZeroCheck(-1));
+        System.out.println(lessThanZeroCheck(12));
+        System.out.println(" ");
+
+        repeatPrint("hi", 6);
 
 
-        MultiplePrint("hi", 6);
   }
 
-      static boolean checkSumSign(int a, int b) {
-          return a + b >= 10 && a + b <= 20;
-      }
 
-      static void checkValue(int c) {
-         if (c < 0) {
-           System.out.println("value is negative");
-         } else {
-           System.out.println("value is positive");
-         }
-      }
+  static boolean checkSumSign(int a, int b) {
+        return a + b >= 10 && a + b <= 20;
+  }
 
-      static boolean LessThanZeroCheck(int a) {
-        int b = 0;
-        return a < b;
-      }
+  static void checkValue(int c) {
+        System.out.println(c >= 0? "Positive" : "Negative");
+  }
 
-      static void MultiplePrint(String a, int b) {
-          int c ;
-          for (c = 0; c < b; c++) {
-            System.out.print(a + " ");
-          }
-      }
+  static boolean lessThanZeroCheck(int a) {
+        return a < 0;
+  }
+
+  static void repeatPrint(String a, int count) {
+        for (int c = 0; c < count; c++) {
+        System.out.print(a + " ");
+  }
+  }
 }
